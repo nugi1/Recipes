@@ -1,0 +1,58 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="form-container" style="width: 50%; margin: auto; margin-top: 30px;">
+  <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">სახელი</label>
+        <input type="text" class="form-control" id="name" placeholder="სახელი" formControlName="name">
+    </div>
+
+    <div class="form-group">
+        <label for="name">დახასიათება</label>
+        <input type="text" class="form-control" id="description" placeholder="დახასიათება" formControlName="description">
+    </div>
+
+    <div class="form-group inline">
+        <label for="name">ინგრედიენტი 1</label>
+        <input type="text" class="form-control" id="ingredient_1" placeholder="" formControlName="ingredient_1">
+    </div>
+
+    <div class="form-group inline">
+        <label for="name">ინგრედიენტი 2</label>
+        <input type="text" class="form-control" id="ingredient_2" placeholder="" formControlName="ingredient_2">
+    </div>
+
+    <div class="form-group inline">
+        <label for="name">ინგრედიენტი 3</label>
+        <input type="text" class="form-control" id="ingredient_3" placeholder="" formControlName="ingredient_3">
+    </div>
+
+    <div class="form-group inline">
+        <label for="name">ინგრედიენტი 4</label>
+        <input type="text" class="form-control" id="ingredient_4" placeholder="" formControlName="ingredient_4">
+    </div>
+
+    <div class="form-group inline">
+        <label for="name">ინგრედიენტი 5</label>
+        <input type="text" class="form-control" id="ingredient_5" placeholder="" formControlName="ingredient_5">
+    </div>
+
+    <div class="form-group inline">
+        <label for="name">ინგრედიენტი 6</label>
+        <input type="text" class="form-control" id="ingredient_6" placeholder="" formControlName="ingredient_6">
+    </div>
+
+    <div class="form-group">
+        <label for="name">ინსტრუქცია</label>
+        <input type="text" class="form-control" id="rule" placeholder="ინსტრუქცია" formControlName="rule">
+    </div>
+
+    <div class="form-group">
+        <label for="name">ფოტო</label>
+        <input type="text" class="form-control" id="url" placeholder="შეიყვანეთ URL" formControlName="url">
+    </div>
+
+
+    <button type="submit" class="btn btn-success">დამატება</button>
+  </form>
+</div>

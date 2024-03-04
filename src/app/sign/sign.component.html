@@ -1,0 +1,16 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="form-container">
+  <form [formGroup]="signForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">მომხმარებელი</label>
+      <input type="text" class="form-control" id="name" placeholder="სახელი" formControlName="name">
+    </div>
+    <div class="form-group">
+      <label for="password">პაროლი</label>
+      <input type="password" class="form-control" id="password" placeholder="პაროლი" formControlName="password">
+    </div>
+
+    <button type="submit" class="btn btn-success">შესვლა</button>
+  </form>
+</div>

@@ -1,0 +1,21 @@
+<body>
+    <div class="card h-100 shadow-sm">
+      <div class="image position-relative" style="cursor: pointer;">
+        <img [src]="recipe.url" style="width: 100%" [alt]="recipe.url" />
+      </div>
+      
+      <div class="card-body">
+        <a href="#">
+          <h6 class="text-uppercase" style="color: green;">{{recipe.name!}}</h6>
+        </a>
+  
+        <span class="mb-2">{{recipe.description}}</span>
+      </div>
+      <div class="d-flex align-items-center justify-content-center">
+            <button style="border-color:green; border-radius: 2px;" (click)="onClick('/detailed', recipe)">დეტალური აღწერა</button>
+            <button style="border-color:green; border-radius: 2px;" (click)="addFavourites(recipe)"> ფავორიტებში დამატება</button>
+        </div>
+    </div>
+  </body>
+  
+  

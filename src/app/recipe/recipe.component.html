@@ -1,0 +1,11 @@
+<div class="d-flex mt-8" style="margin-bottom: 4%; float: end;">
+  <input (keyup.enter)="onSearch()" type="text" placeholder="მოძებნე სახელით" class="form-control me-2" #search>
+  <button (click)="onSearch()" class="btn btn-outline-primary mx-2">ძებნა</button>
+  <button (click)="onReset()" class="btn btn-outline-success">გადატვირთვა</button>
+  <button class="btn-outline-success" (click)="getFavourites()" style="margin-left: 5%; border-radius: 10px; width: 200px;">მაჩვენე ფავორიტები</button>
+</div>
+<div class="row row-cols-3 g-3 mb-4">
+  <div class="col" *ngFor="let recipe of recipes">
+      <app-recipe-item [recipe]="recipe"></app-recipe-item>
+  </div>
+</div>

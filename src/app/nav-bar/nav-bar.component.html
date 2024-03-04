@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <a class="navbar-brand" href="#">გურმანები</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02" style="margin-left: 30%;">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">რეცეპტები <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ჩემს შესახებ</a>
+        </li>
+      </ul>
+
+      <div *ngIf="!authorised">
+          <a class="btn btn-outline-light my-2 my-sm-0" style="color: white" (click)="onClick('/sign')">შესვლა</a>
+      </div>
+
+      <div *ngIf="authorised">
+        <button style="margin-right: 5px" (click)="onClick('/add')">დამატება</button>
+        <a class="btn btn-outline-light my-2 my-sm-0" style="color: white" (click)="onClick('/logout')">გასვლა</a>
+      </div>
+
+      
+    </div>
+  </nav>
+
